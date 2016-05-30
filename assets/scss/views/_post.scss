@@ -163,8 +163,11 @@
             }
         }
         img.post-author-avatar {
-            margin-right: rem-calc(55);
             margin-bottom: 0;
+
+            @media only screen and (min-width: 40.063em) {
+                margin-right: rem-calc(55);
+            }
         }
         > p {
             font-size: rem-calc(18);
@@ -178,6 +181,11 @@
                 text-align: left;
             }
 
+        }
+        .author-bio {
+            @media only screen and (min-width: 40.063em) {
+                margin-left: 260px;
+            }
         }
         a {
             text-decoration: none;

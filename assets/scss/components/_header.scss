@@ -112,7 +112,11 @@
 }
 
 .main-header {
-    padding: 24vh rem-calc(30);
+    padding: 18vh rem-calc(30);
+
+    @media only screen and (min-width: 40.063em) {
+        padding: 24vh rem-calc(30);
+    }
 
     h1 {
         font-size: rem-calc(60);
