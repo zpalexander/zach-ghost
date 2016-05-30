@@ -1,0 +1,138 @@
+// nav
+.main-nav {
+    .fa-bars {
+        cursor: pointer;
+        margin-right: rem-calc(30);
+        margin-top: rem-calc(30);
+        font-size: rem-calc(40);
+        &.element-dark {
+            color: $color-main-dark;
+        }
+        &.element-light {
+            color: $color-main-light;
+        }
+    }
+}
+
+
+// menu based on : http://tympanus.net/Development/FullscreenOverlayStyles/index.html
+/* main-menu-ovrl style */
+.main-menu-ovrl {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color-main-dark, .9);
+    -webkit-user-select: none;
+    user-select: none;
+    /* main-menu-ovrl closing cross */
+    .main-menu-ovrl-close {
+        font-size: rem-calc(60);
+        text-align: center;
+        position: absolute;
+        right: rem-calc(25);
+        top: rem-calc(23);
+        overflow: hidden;
+        border: none;
+        color: $color-main-light;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    /* Menu style */
+    nav {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        height: 60%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 325px;
+        -webkit-user-select: none;
+        user-select: none;
+        li {
+            display: block;
+            height: 20%;
+            height: calc(100% / 5);
+            min-height: rem-calc(54);
+            a {
+                font-weight: 300;
+                display: block;
+                color: $color-main-light;
+                font-size: rem-calc(54);
+                -webkit-transition: color 0.2s;
+                transition: color 0.2s;
+                font-family: $headers-font;
+                text-decoration: none;
+                &:hover, &:focus {
+                    color: darken($color-main-light, 50%);
+                }
+            }
+        }
+    }
+    .social-media-links a {
+        text-decoration: none;
+    }
+}
+
+/* Effects */
+.main-menu-ovrl-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    nav {
+        -webkit-perspective: rem-calc(1200);
+        perspective: rem-calc(1200);
+        ul {
+            opacity: 0.4;
+            -webkit-transform: translateY(-25%) rotateX(35deg);
+            transform: translateY(-25%) rotateX(35deg);
+            -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        nav {
+            ul {
+                opacity: 1;
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+            }
+        }
+    }
+    &.close {
+        nav {
+            ul {
+                -webkit-transform: translateY(25%) rotateX(-35deg);
+                transform: translateY(25%) rotateX(-35deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 30.5em) {
+    .main-menu-ovrl nav {
+        height: 70%;
+        li a {
+            font-size: rem-calc(34);
+        }
+    }
+    .main-menu-ovrl ul li {
+        min-height: rem-calc(34);
+    }
+}

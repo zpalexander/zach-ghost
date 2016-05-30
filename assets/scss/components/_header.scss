@@ -1,0 +1,140 @@
+/**
+ * _header.scss
+ */
+
+// header styles
+.header-back-btn {
+    color: $color-main-dark;
+    border: rem-calc(3) solid $color-main-dark;
+    padding: rem-calc(5) rem-calc(20);
+    text-align: center;
+    text-decoration: none;
+    border-radius: rem-calc(3);
+    font-size: rem-calc(16);
+    font-family: $headers-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: rem-calc(30);
+    margin-top: rem-calc(30);
+
+    .fa {
+        font-size: rem-calc(14);
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-main-dark;
+
+        .fa {
+            -webkit-transform: translateX(rem-calc(-5));
+            transform: translateX(rem-calc(-5));
+        }
+    }
+
+    &.element-dark {
+        color: $color-main-dark;
+        border: rem-calc(3) solid $color-main-dark;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-main-dark;
+        }
+    }
+
+    &.element-light {
+        color: $color-main-light;
+        border: rem-calc(3) solid $color-main-light;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-main-light;
+        }
+    }
+}
+
+.main-header,
+.post-view-header {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    .element-light {
+        color: $color-main-light;
+    }
+
+    .element-dark,
+    &.no-cover {
+        color: $color-main-dark;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: rem-calc(22);
+    }
+
+    .post-logo-container,
+    .author-logo-container {
+        padding: rem-calc(15) rem-calc(40);
+
+        img {
+            max-width: rem-calc(180);
+            max-height: rem-calc(180);
+        }
+    }
+
+    .author-logo-container {
+        img {
+            border-radius: 100%;
+        }
+    }
+
+    a,
+    a:active,
+    a:focus,
+    a:hover {
+        color: inherit;
+    }
+}
+
+.main-header {
+    padding: 24vh rem-calc(30);
+
+    h1 {
+        font-size: rem-calc(60);
+        line-height: 1.2;
+        font-weight: 100;
+
+        @media screen and (min-width: 48em) {
+            font-size: rem-calc(90);
+        }
+    }
+
+    .author-stats {
+        font-size: rem-calc(20);
+        font-family: $headers-font;
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: 48em) {
+        padding: 22vh rem-calc(30) 24vh;
+
+        &.no-cover {
+            padding: 10% rem-calc(30);
+        }
+    }
+}

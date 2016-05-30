@@ -1,0 +1,106 @@
+{{!< default}}
+
+{{#post}}
+
+<nav class="main-nav">
+    <a href="{{@blog.url}}" class="header-back-btn js-bg-check left">
+        <i class="fa fa-chevron-left"></i> Home
+    </a>
+    {{> "menu-activator-icon"}}
+</nav>
+<header class="post-view-header js-blog-bg-image {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+</header>
+<div class="post-header-content">
+    <h1 class="post-title js-bg-check">{{title}}</h1>
+    <section class="post-meta js-bg-check">
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </section>
+</div>
+
+<main class="post-view-content" role="main">
+
+    <article class="{{post_class}}">
+
+        <section class="post-content row">
+            <div class="small-12 columns">{{content}}</div>
+        </section>
+
+        <footer class="post-footer row">
+            <div class="small-12 columns">
+                <section class="post-tags">
+                    {{tags prefix="Tags: "}}
+                </section>
+            </div>
+        </footer>
+
+        <div class="row post-prev-next-pagination">
+            <div class="prev small-6 columns text-left">
+                {{#prev_post}}
+                    {{!-- you can use here {{image}} too --}}
+                    <div class="prev-next-label">
+                        <a href="{{url}}">
+                            <i class="fa fa-angle-double-left"></i> Previous
+                        </a>
+                    </div>
+                    <a href="{{url}}" class="title">
+                        {{title}}
+                    </a>
+                {{/prev_post}}
+            </div>
+            <div class="next small-6 columns text-right">
+                {{#next_post}}
+                    {{!-- you can use here {{image}} too --}}
+                    <div class="prev-next-label">
+                        <a href="{{url}}">
+                            Next <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                    <a href="{{url}}" class="title">
+                        {{title}}
+                    </a>
+                {{/next_post}}
+            </div>
+        </div>
+
+        {{! Everything inside the #author tags pulls data from the author }}
+        {{#author}}
+            <section class="author-info">
+                <div class="row">
+                    <section class="post-author small-12 columns">
+                        {{#if image}}
+                            <img src="{{image}}" class="post-author-avatar" alt="{{name}}">
+                        {{/if}}
+                        {{#if name}}
+                            <span class="author-label">Author</span>
+                            <h1><a href="{{@blog.url}}/resume" class="author-link-name">{{name}}</a></h1>
+                        {{/if}}
+                        <p class="social-media-links">
+                            <a href="https://twitter.com/zpalexander">
+                                <img src="{{asset "images/twitter.png"}}" />
+                            </a>
+                            <a href="https://www.linkedin.com/pub/zachary-alexander/85/44/3b4">
+                                <img src="{{asset "images/linkedin.png" }}" />
+                            </a>
+                            <a href="https://github.com/zpalexander">
+                                <img src="{{asset "images/github.png"}}" />
+                            </a>
+                            <a href="http://www.instagram.com/zpalexander">
+                                <img src="{{asset "images/instagram.png"}}" />
+                            </a>
+                            <a href="{{@blog.url}}/rss">
+                                <img src="{{asset "images/rss.png"}}" />
+                            </a>
+                        </p>
+                        {{#if bio}}
+                            <p>{{bio}}</p>
+                        {{/if}}
+                    </section>
+                </div>
+            </section>
+        {{/author}}
+
+    </article>
+
+</main>
+
+{{/post}}

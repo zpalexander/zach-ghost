@@ -1,0 +1,45 @@
+{{!< default}}
+{{#post}}
+<nav class="main-nav">
+    <a href="{{@blog.url}}" class="header-back-btn js-bg-check left">
+        <i class="fa fa-chevron-left"></i> Home
+    </a>
+    {{> "menu-activator-icon"}}
+</nav>
+
+<main id="resume" class="row" role="main">
+    <article class="{{post_class}} small-12 columns">
+        {{#author}}
+        {{#if image}}
+        <div class="post-author-avatar-container">
+            <img src="{{image}}" class="post-author-avatar" alt="{{name}}" />
+        </div>
+        {{/if}}
+        <h3 class="name">Zach Alexander</h3>
+         <p class="social-media-links">
+            <a href="https://twitter.com/zpalexander">
+                <img src="{{asset "images/twitter.png"}}" />
+            </a>
+            <a href="https://www.linkedin.com/pub/zachary-alexander/85/44/3b4">
+                <img src="{{asset "images/linkedin.png"}}" />
+            </a>
+            <a href="https://github.com/zpalexander">
+                <img src="{{asset "images/github.png"}}" />
+            </a>
+            <a href="http://www.instagram.com/zpalexander">
+                <img src="{{asset "images/instagram.png"}}" />
+            </a>
+            <a href="{{@blog.url}}/rss">
+                <img src="{{asset "images/rss.png"}}" />
+            </a>
+        </p>
+        {{/author}}
+        <p class="description">
+            Currently a software developer at <a href="https://nytimes.com">nytimes.com</a>. Former New York University and Peking University student. I do all things web.
+        </p>
+        <section class="post-content">
+            {{content}}
+        </section>
+    </article>
+</main>
+{{/post}}

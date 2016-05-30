@@ -1,0 +1,11 @@
+{
+  "name": "zach-alexander-ghost-theme",
+  "version": "0.0.1",
+  "devDependencies": {
+    "es6-promise": "^3.2.1",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-scss-lint": "^0.4.0"
+  }
+}

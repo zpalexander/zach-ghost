@@ -1,0 +1,12 @@
+.post-author-avatar {
+    width: rem-calc(200);
+    height: rem-calc(200);
+    border-radius: 50%;
+    float: none;
+    margin-bottom: rem-calc(20);
+    @media only screen and (min-width: 40.063em) {
+        margin-right: rem-calc(50);
+        margin-bottom: 0;
+        float: left;
+    }
+}

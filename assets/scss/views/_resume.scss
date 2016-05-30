@@ -1,0 +1,48 @@
+/**
+ * _resume.scss
+ *
+ * Styles for the resume page
+ */
+#resume {
+
+    h1, h2, h3, h4 {
+        text-align: left;
+    }
+
+    article {
+        margin-top: 80px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .post-author-avatar-container {
+        height: 130px;
+        width: 100%;
+    }
+
+    .post-author-avatar {
+        display: block;
+        width: auto;
+        height: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .social-media-links {
+        text-align: center;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .description {
+        text-align: center;
+        text-decoration: italic;
+    }
+}

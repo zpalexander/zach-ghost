@@ -1,0 +1,24 @@
+/**
+ * _defaults.scss
+ */
+html {
+    height: auto;
+}
+
+body {
+    position: relative;
+}
+
+::selection {
+    background: $color-main-contrast;
+    color: $color-main-light;
+}
+
+::-moz-selection {
+    background: $color-main-contrast;
+    color: $color-main-light;
+}
+
+hr {
+    margin: 40px 0;
+}

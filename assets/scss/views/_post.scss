@@ -1,0 +1,238 @@
+// post view page
+
+.post-template {
+    .post-view-header {
+        padding: 10% rem-calc(30);
+        &.no-cover {
+            padding: 10% rem-calc(30);
+        }
+        @media screen and (min-width: 48em) {
+            padding: 15% rem-calc(30);
+            &.no-cover {
+                padding: 10% rem-calc(30) 0;
+            }
+        }
+    }
+    .post-header-content {
+        max-width: $row-width + 12.5;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 30px;
+        h1 {
+            font-size: rem-calc(55);
+            line-height: 1.2;
+            @media screen and (min-width: 48em) {
+                font-size: rem-calc(68);
+            }
+        }
+    }
+    .post-view-content {
+        margin-top: rem-calc(60);
+        overflow-x: hidden;
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto rem-calc(20);
+        }
+        pre {
+            margin: 0 auto rem-calc(20);
+        }
+    }
+    .post-meta {
+        font-family: $headers-font;
+        font-weight: 700;
+        font-size: rem-calc(18);
+        margin-top: rem-calc(30);
+        a, a:active, a:focus, a:hover {
+            display: inline-block;
+            padding: 0 rem-calc(10);
+            border: rem-calc(3) solid $color-main-dark;
+            text-decoration: none;
+        }
+        &.element-light {
+            a, a:active, a:focus, a:hover {
+                border: rem-calc(3) solid $color-main-light
+            }
+        }
+        &.element-dark {
+            a, a:active, a:focus, a:hover {
+                border: rem-calc(3) solid $color-main-dark
+            }
+        }
+    }
+    .post-title {
+        position: relative;
+        margin-top: rem-calc(5);
+        margin-bottom: rem-calc(10);
+        &.element-light {
+            &:before,
+            &:after {
+                background-color: $color-main-light;
+            }
+        }
+        &.element-dark {
+            &:before,
+            &:after {
+                background-color: $color-main-dark;
+            }
+        }
+    }
+    .post-footer {
+        .post-tags {
+            border-bottom: 0.0625rem solid #e6e6e6;
+            padding-bottom: rem-calc(35);
+            font-family: $headers-font;
+            font-weight: 700;
+            a {
+                font-weight: normal;
+            }
+        }
+    }
+    .post-prev-next-pagination {
+        padding-top: rem-calc(35);
+        padding-bottom: rem-calc(35);
+        a {
+            color: lighten($color-main-dark, 10%);
+            text-decoration: none;
+        }
+        .prev-next-label {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+
+// author info box in post view page
+.author-info {
+    padding: 0;
+    position: relative;
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+    margin-bottom: rem-calc(40);
+    background: darken($color-main-light, 5%);
+    .post-author {
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+        text-align: center;
+        .author-label {
+            display: block;
+            font-size: rem-calc(16);
+            color: lighten($color-main-dark, 50%);
+            font-style: italic;
+        }
+        .author-link-name {
+            color: $color-main-dark;
+            -webkit-transition: color .3s;
+            transition: color .3s;
+            &:active, &:hover, &:focus {
+                color: $color-main-contrast;
+            }
+        }
+        .author-website {
+            font-size: rem-calc(16);
+        }
+        .social-media-links {
+            img {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+            }
+            @media only screen and (min-width: 40.063em) {
+                text-align: left;
+            }
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-family: $headers-font;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: rem-calc(36);
+            @media only screen and (min-width: 40.063em) {
+                text-align: left;
+            }
+        }
+        img.post-author-avatar {
+            margin-right: rem-calc(55);
+            margin-bottom: 0;
+        }
+        > p {
+            font-size: rem-calc(18);
+            a {
+                color: $color-main-contrast;
+            }
+        }
+        p {
+            text-align: center;
+            @media only screen and (min-width: 40.063em) {
+                text-align: left;
+            }
+
+        }
+        a {
+            text-decoration: none;
+        }
+        @media only screen and (min-width: 40.063em) {
+            text-align: left;
+        }
+    }
+}
+
+// pagination
+.pagination {
+    padding: rem-calc(60) rem-calc(30);
+    text-align: center;
+    color: $color-main-dark;
+    font-weight: bold;
+    font-family: $headers-font;
+    a, a:active, a:focus, a:hover {
+        color: inherit;
+        display: inline-block;
+        padding: rem-calc(5) rem-calc(30);
+        border: rem-calc(3) solid $color-main-dark;
+        border-radius: rem-calc(3);
+        text-decoration: none;
+        .fa {
+            font-size: rem-calc(12);
+        }
+    }
+    a:hover {
+        &.older-posts {
+            .fa {
+                -webkit-transition: all .3s;
+                transition: all .3s;
+                -webkit-transform: translateX(rem-calc(5));
+                transform: translateX(rem-calc(5));
+            }
+        }
+        &.newer-posts {
+            .fa {
+                -webkit-transition: all .3s;
+                transition: all .3s;
+                -webkit-transform: translateX(rem-calc(-5));
+                transform: translateX(rem-calc(-5));
+            }
+        }
+    }
+}
+
+// tag view post loop styles
+.tag-view-info {
+    font-size: rem-calc(26);
+    text-align: center;
+    font-family: $headers-font;
+    font-weight: 700;
+    background: darken($color-main-light, 10%);
+    padding: rem-calc(40) rem-calc(30);
+    color: $color-main-dark;
+}
