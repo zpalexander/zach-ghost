@@ -24,9 +24,6 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
-
-    {{! Modernizr }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body class="{{body_class}}">
 
@@ -43,7 +40,9 @@
     {{ghost_foot}}
 
     {{! The main JavaScript files }}
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script
+        async
         type="text/javascript"
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -51,10 +50,11 @@
     </script>
 
     <script
+        async
         type="text/javascript"
         src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js">
     </script>
-    <script type="text/javascript" src="{{asset "js/build/bundle.js"}}"></script>
+    <script async type="text/javascript" src="{{asset "js/build/bundle.js"}}"></script>
 
 </body>
 </html>
