@@ -63,6 +63,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    -webkit-transition: background-image 500ms ease-in-out;
+    -moz-transition: background-image 500ms ease-in-out;
+    -ms-transition: background-image 500ms ease-in-out;
+    -o-transition: background-image 500ms ease-in-out;
+    transition: background-image 500ms ease-in-out;
 
     .element-light {
         color: $color-main-light;
