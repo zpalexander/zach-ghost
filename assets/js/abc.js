@@ -55,9 +55,7 @@ var abc = (function ($) {
         syntaxHighlighter();
     };
 
-    return {
-        init: init
-    };
+    return { init: init };
 
 })(jQuery);
 
