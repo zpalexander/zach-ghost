@@ -2,42 +2,9 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<nav class="main-nav">
-    {{> "menu-activator-icon"}}
-</nav>
 
 <header class="main-header js-blog-bg-image {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <div class="main-header-content">
-        {{#if @blog.logo}}
-        <div class="post-logo-container">
-            <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
-        </div>
-        {{/if}}
-        <h1 class="page-title">
-            <a href="{{@blog.url}}/resume">
-                <span>{{@blog.title}}</span>
-            </a>
-        </h1>
-        <p class="social-media-links">
-            <a href="https://www.linkedin.com/in/zpalexander">
-                <img src="{{asset "images/linkedin.png"}}" />
-            </a>
-            <a href="https://github.com/zpalexander">
-                <img src="{{asset "images/github.png"}}" />
-            </a>
-            <a href="http://www.instagram.com/zpalexander">
-                <img src="{{asset "images/instagram.png"}}" />
-            </a>
-            <a href="{{@blog.url}}/rss">
-                <img src="{{asset "images/rss.png"}}" />
-            </a>
-        </p>
-        <h2 class="page-description"><span>{{@blog.description}}</span></h2>
+        <iframe src="https://player.vimeo.com/video/223515967" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 </header>
-
-{{! The main content area on the homepage }}
-<main id="content" class="content home-template" role="main">
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
-</main>
