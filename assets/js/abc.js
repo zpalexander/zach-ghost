@@ -1,25 +1,26 @@
 'use strict';
 
-var abc = (function ($) {
+var abc = (function($) {
 
-    var
-    mainMenu = function () {
-        var menuOvrl = $('.js-main-menu-ovrl'),
-            menuHamburger = $('.js-main-menu-open');
-        $('.js-main-menu-open').on('click', function (e) {
+    var mainMenu = function() {
+        var menuOvrl = $('.js-main-menu-ovrl');
+        var menuOvrlHugeInc = $('.main-menu-ovrl-hugeinc');
+        var menuHamburger = $('.js-main-menu-open');
+        $('.js-main-menu-open').on('click', function(e) {
             e.preventDefault();
             menuHamburger.hide();
             menuOvrl.addClass('open');
         });
-        $('.js-main-menu-close').on('click', function (e) {
+        $('.js-main-menu-close').on('click', function(e) {
             e.preventDefault();
             menuOvrl.removeClass('open');
             menuHamburger.show();
         });
-    },
+        menuOvrlHugeInc.addClass('page-loaded');
+    };
 
     // change color according to the background
-    headerTitles = function () {
+    var headerTitles = function() {
         if ($('.js-bg-check').length && $('.js-blog-bg-image').length) {
             var imgPath = $('.js-blog-bg-image').css('background-image');
             imgPath = imgPath && imgPath.match(/url\((['"])?(.*?)\1\)/);
@@ -40,15 +41,15 @@ var abc = (function ($) {
                 });
             }
         }
-    },
+    };
 
     // https://highlightjs.org/
-    syntaxHighlighter = function () {
+    var syntaxHighlighter = function() {
         hljs.initHighlightingOnLoad();
-    },
+    };
 
     // abc javascripts initialization
-    init = function () {
+    var init = function() {
         mainMenu();
         $(document).foundation();
         headerTitles();

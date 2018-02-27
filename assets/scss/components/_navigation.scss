@@ -89,8 +89,6 @@
 .main-menu-ovrl-hugeinc {
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
     nav {
         -webkit-perspective: rem-calc(1200);
         perspective: rem-calc(1200);
@@ -101,6 +99,10 @@
             -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
             transition: transform 0.5s, opacity 0.5s;
         }
+    }
+    &.page-loaded {
+        -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+        transition: opacity 0.5s, visibility 0s 0.5s;
     }
     &.open {
         opacity: 1;
