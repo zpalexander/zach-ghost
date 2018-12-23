@@ -63,12 +63,12 @@
         </div>
 
         {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
+        {{#primary_author}}
             <section class="author-info">
                 <div class="row">
                     <section class="post-author small-12 columns">
-                        {{#if image}}
-                            <img src="{{img_url}}" class="post-author-avatar" alt="{{name}}">
+                        {{#if primary_author.profile_image}}
+                            <img src="{{primary_author.profile_image}}" class="post-author-avatar" alt="{{name}}">
                         {{/if}}
                         {{#if name}}
                             <span class="author-label">Author</span>
@@ -94,7 +94,7 @@
                     </section>
                 </div>
             </section>
-        {{/author}}
+        {{/primary_author}}
 
     </article>
 

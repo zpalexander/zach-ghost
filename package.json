@@ -3,6 +3,7 @@
   "author": {
     "email": "zpalexander@gmail.com"
   },
+  "keywords": "ghost-theme",
   "version": "2.0.0",
   "devDependencies": {
     "es6-promise": "^3.2.1",
