@@ -8,7 +8,7 @@
     </a>
     {{> "menu-activator-icon"}}
 </nav>
-<header class="post-view-header js-blog-bg-image {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+<header class="post-view-header js-blog-bg-image {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
 </header>
 <div class="post-header-content">
     <h1 class="post-title js-bg-check">{{title}}</h1>
@@ -36,7 +36,7 @@
         <div class="row post-prev-next-pagination">
             <div class="prev small-6 columns text-left">
                 {{#prev_post}}
-                    {{!-- you can use here {{image}} too --}}
+                    {{!-- you can use here {{img_url}} too --}}
                     <div class="prev-next-label">
                         <a href="{{url}}">
                             <i class="fa fa-angle-double-left"></i> Previous
@@ -49,7 +49,7 @@
             </div>
             <div class="next small-6 columns text-right">
                 {{#next_post}}
-                    {{!-- you can use here {{image}} too --}}
+                    {{!-- you can use here {{img_url}} too --}}
                     <div class="prev-next-label">
                         <a href="{{url}}">
                             Next <i class="fa fa-angle-double-right"></i>
@@ -68,7 +68,7 @@
                 <div class="row">
                     <section class="post-author small-12 columns">
                         {{#if image}}
-                            <img src="{{image}}" class="post-author-avatar" alt="{{name}}">
+                            <img src="{{img_url}}" class="post-author-avatar" alt="{{name}}">
                         {{/if}}
                         {{#if name}}
                             <span class="author-label">Author</span>

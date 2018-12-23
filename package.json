@@ -1,6 +1,9 @@
 {
   "name": "zach-alexander-ghost-theme",
-  "version": "0.0.1",
+  "author": {
+    "email": "zpalexander@gmail.com"
+  },
+  "version": "2.0.0",
   "devDependencies": {
     "es6-promise": "^3.2.1",
     "gulp": "^3.9.1",
