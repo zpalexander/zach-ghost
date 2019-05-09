@@ -15,24 +15,27 @@
             <img src="{{image}}" class="post-author-avatar" alt="{{name}}" />
         </div>
         {{/if}}
-        <h3 class="name">Zach Alexander</h3>
-         <p class="social-media-links">
+        <h1 class="name">Resume</h1>
+        <p aria-label="Social media links" class="social-media-links">
             <a href="https://www.linkedin.com/in/zpalexander">
-                <img src="{{asset "images/linkedin.png"}}" />
+                <img alt="Linked In" src="{{asset "images/linkedin.png"}}" />
             </a>
             <a href="https://github.com/zpalexander">
-                <img src="{{asset "images/github.png"}}" />
+                <img alt="Github" src="{{asset "images/github.png"}}" />
             </a>
             <a href="http://www.instagram.com/zpalexander">
-                <img src="{{asset "images/instagram.png"}}" />
+                <img alt="Instagram" src="{{asset "images/instagram.png"}}" />
             </a>
             <a href="{{@blog.url}}/rss">
-                <img src="{{asset "images/rss.png"}}" />
+                <img alt="RSS" src="{{asset "images/rss.png"}}" />
             </a>
         </p>
         {{/author}}
         <p class="description">
-            Currently a software developer at <a href="https://amazon.com">amazon.com</a>. Former New York University and Peking University student. I do all things web.
+            I'm Zach Alexander.
+        </p>
+        <p class="description">
+            I'm currently a software developer at <a href="https://amazon.com">amazon.com</a> I do all things web.
         </p>
         <section class="post-content">
             {{content}}
